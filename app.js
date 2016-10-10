@@ -25,7 +25,7 @@ server.post('/api/messages', connector.listen());
 
 bot.dialog('/', function (session) {
     //session.send("Hello greg");
-    console.debug("test debug");
+    Console.debug("test debug");
     session.send("hello mathieu2");
 try {
     var prettySession = stringifyObject(session, {
