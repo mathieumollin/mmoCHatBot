@@ -25,7 +25,8 @@ server.post('/api/messages', connector.listen());
 
 bot.dialog('/', function (session) {
     //session.send("Hello greg");
-    session.send(session);
+    session.send("hello mathieu");
+//    session.send("hello mathieu");
     /*require("request");
     var request = require('request');
     request('https://api.projectoxford.ai/luis/v1/application?id=b146abe2-b63c-47e7-a781-feef75a398b7&subscription-key=921efd6f49f9421cab1191ba1bfe1572&q=%22'++'%22', function (error, response, body) {
