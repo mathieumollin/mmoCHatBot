@@ -33,7 +33,8 @@ try {
 });
     session.send(prettySession);
 } catch (error) {
-    session.send(error);
+    Console.error(error);
+    session.send(error.message);
 }
     
     /*require("request");
