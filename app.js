@@ -35,7 +35,7 @@ var stringifyObject = require("stringify-object");
     session.send(prettySession);
     session.send(session.message);
     
-    /require("request");
+    require("request");
     var request = require('request');
     request('https://api.projectoxford.ai/luis/v1/application?id=b146abe2-b63c-47e7-a781-feef75a398b7&subscription-key=921efd6f49f9421cab1191ba1bfe1572&q='+encodeURI(session.message), function (error, response, body) {
   if (!error && response.statusCode == 200) {
