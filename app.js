@@ -42,8 +42,8 @@ var stringifyObject = require("stringify-object");
     console.log(body);
     session.send(body);
 
-    var luisResult=JSON.parse(body)
-    session.send(luisResult.intents[0].intent + "("+)luisResult.intents[0].score+")");
+    var luisResult=JSON.parse(body);
+    session.send(luisResult.intents[0].intent + "("+luisResult.intents[0].score+")");
   }
 })
 });
