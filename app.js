@@ -41,6 +41,9 @@ var stringifyObject = require("stringify-object");
   if (!error && response.statusCode == 200) {
     console.log(body);
     session.send(body);
+
+    var luisResult=JSON.parse(body)
+    session.send(luisResult.intents[0].intent + "("+)luisResult.intents[0].score+")");
   }
 })
 });
