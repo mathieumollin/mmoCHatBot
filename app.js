@@ -44,6 +44,13 @@ var stringifyObject = require("stringify-object");
 
     var luisResult=JSON.parse(body);
     session.send(luisResult.intents[0].intent + "("+luisResult.intents[0].score+")");
+
+
+    
   }
 })
+request('https://api.projectoxford.ai/luis/v1/application?id=0355ead1-2d08-4955-ab95-e263766e8392&subscription-key=921efd6f49f9421cab1191ba1bfe1572&q='+encodeURI(session.message), function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+    console.log(body);
+    session.send("Cortana dit : "+body);}});
 });
