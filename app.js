@@ -28,7 +28,7 @@ bot.dialog('/', function (session) {
     session.send("hello gregory");
 
 var stringifyObject = require("stringify-object");
-    var prettySession = stringifyObject(session.keys(), {
+    var prettySession = stringifyObject(Object.getOwnPropertyNames(session), {
     indent: '  ',
     singleQuotes: false
 });
